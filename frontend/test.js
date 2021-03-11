@@ -272,13 +272,13 @@ function draw(attr){
   resetCanvas();
   d3.select('canvas').selectAll('*').remove();
 
-  d3.csv('../house_data_processed.csv').then(function(result) {
+  d3.csv('house_data_processed.csv').then(function(result) {
       testChartPie(result, "2014", attr, 'chart1');
       testChartPie(result, "2015", attr, 'chart3');
       changeTitle(attr)
   });
   
-  d3.csv('../house_data_processed.csv').then(function(result) {
+  d3.csv('house_data_processed.csv').then(function(result) {
       testChartBar(result, "2014", attr, 'chart2');
       testChartBar(result, "2015", attr, 'chart4');
   });
