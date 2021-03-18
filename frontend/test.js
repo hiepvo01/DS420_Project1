@@ -113,6 +113,7 @@ function testChartPie(students, year, attr, chartid) {
   
     students = students.filter(function(d){ return d.Year == year });
     var terms = d3.group(students, d => d[attr]);
+    console.log(terms)
     terms_data = []
     terms_labels = []
     terms_colors = []
